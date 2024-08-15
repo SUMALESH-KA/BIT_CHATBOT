@@ -9,24 +9,24 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="title">BIT Voice Chatbot</div>
-        <div class="form">
-            <div class="bot-inbox inbox">
-                <div class="icon">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>BIT Voice Chatbot</h2>
+        </div>
+        <div class="chat-messages">
+            <div class="bot-message">
+                <div class="avatar">
                     <i class="fas fa-user"></i>
                 </div>
-                <div class="msg-header">
+                <div class="message">
                     <p>Hello there, how can I help you?</p>
                 </div>
             </div>
         </div>
-        <div class="typing-field">
-            <div class="input-data">
-                <input id="data" type="text" placeholder="Type or speak something here.." required>
-                <button id="voice-btn"><i class="fas fa-microphone"></i></button>
-                <button id="send-btn">Send</button>
-            </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type or speak something here.." required>
+            <button class="voice-btn"><i class="fas fa-microphone"></i></button>
+            <button class="send-btn">Send</button>
         </div>
     </div>
 
