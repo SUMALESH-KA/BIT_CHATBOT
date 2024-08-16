@@ -8,39 +8,42 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 /* Chatbot wrapper styling */
 .wrapper {
     background: #ffffff;
-    max-width: 450px;
     width: 100%;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
     position: relative;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Chatbot title styling */
+/* Enlarged Chatbot title styling */
 .wrapper .title {
     background: #007bff;
     color: #fff;
-    padding: 15px 20px;
+    padding: 30px 20px; /* Increased padding for larger title area */
     text-align: center;
-    border-radius: 15px 15px 0 0;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 28px; /* Increased font size */
+    font-weight: 700;
+    box-sizing: border-box;
 }
 
 /* Chat messages container styling */
 .wrapper .form {
-    max-height: 300px;
+    flex: 1;
     overflow-y: auto;
-    padding: 15px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     box-sizing: border-box;
 }
 
@@ -57,8 +60,8 @@ body {
 }
 
 .bot-inbox .icon {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: #007bff;
     color: #fff;
     border-radius: 50%;
@@ -71,9 +74,9 @@ body {
 
 .bot-inbox .msg-header {
     background: #f1f1f1;
-    padding: 12px 18px;
+    padding: 15px 20px;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 16px;
     color: #333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -87,9 +90,9 @@ body {
 .user-inbox .msg-header {
     background: #007bff;
     color: #fff;
-    padding: 12px 18px;
+    padding: 15px 20px;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 16px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -100,12 +103,9 @@ body {
 
 /* Typing field container styling */
 .typing-field {
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    padding: 10px 20px;
+    padding: 20px; /* Increased padding for more space */
     background: #f9f9f9;
-    border-radius: 0 0 15px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,31 +123,34 @@ body {
 }
 
 .input-data input {
-    width: calc(100% - 105px); /* Adjusted to give more space */
-    padding: 10px;
+    width: calc(100% - 110px); /* Adjusted width to accommodate larger buttons */
+    padding: 15px;
     border-radius: 25px;
     border: 1px solid #ccc;
-    font-size: 15px;
+    font-size: 16px;
     outline: none;
     background: #fff;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .input-data button {
-    width: 40px; /* Reduced width for buttons */
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border: none;
     background: #007bff;
     color: #fff;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
     box-sizing: border-box;
-    margin-left: 5px; /* Added margin to separate buttons */
+}
+
+.input-data button i {
+    font-size: 20px; /* Ensure icon size is large enough */
+    color: white;    /* Ensure the icon color contrasts with the background */
 }
 
 .input-data button:hover {
